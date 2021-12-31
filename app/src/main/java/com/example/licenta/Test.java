@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity2 extends AppCompatActivity {
+public class Test extends AppCompatActivity {
 
     // creating variables for our edittext, button and dbhandler
     private EditText courseNameEdt, courseTracksEdt, courseDurationEdt, courseDescriptionEdt;
@@ -18,7 +18,7 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.model);
 
         // initializing all our variables.
         courseNameEdt = findViewById(R.id.idEdtCourseName);
@@ -29,7 +29,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         // creating a new dbhandler class
         // and passing our context to it.
-        dbHandler = new DBHandler(MainActivity2.this);
+        dbHandler = new DBHandler(Test.this);
 
         // below line is to add on click listener for our add course button.
         addCourseBtn.setOnClickListener(new View.OnClickListener() {
@@ -44,16 +44,16 @@ public class MainActivity2 extends AppCompatActivity {
 
                 // validating if the text fields are empty or not.
                 if (courseName.isEmpty() && courseTracks.isEmpty() && courseDuration.isEmpty() && courseDescription.isEmpty()) {
-                    Toast.makeText(MainActivity2.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Test.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 // on below line we are calling a method to add new
                 // course to sqlite data and pass all our values to it.
-                dbHandler.addNewCourse(courseName, courseDuration, courseDescription, courseTracks);
+               // dbHandler.addNewCourse(courseName, courseDuration, courseDescription, courseTracks);
 
                 // after adding the data we are displaying a toast message.
-                Toast.makeText(MainActivity2.this, "Course has been added.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Test.this, "Course has been added.", Toast.LENGTH_SHORT).show();
                 courseNameEdt.setText("");
                 courseDurationEdt.setText("");
                 courseTracksEdt.setText("");

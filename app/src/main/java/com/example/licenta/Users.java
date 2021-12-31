@@ -8,12 +8,23 @@ public class Users {
 
     private String username;
     private String password;
+
+
+    private Integer status;
     private int id;
 
 
 
     public Users() {
     }
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
     public String getUsername() {
         return username;
     }
@@ -39,9 +50,10 @@ public class Users {
     }
 
     // constructor
-    public Users(String username, String password, int id) {
+    public Users(String username, String password, int id,int status) {
         this.username = username;
         this.password = password;
+        this.status=status;
         this.id = id;
     }
 }

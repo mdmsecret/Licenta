@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidSDK/Licenta/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/AndroidSDK/Licenta/app/src/main/res/layout/event_create.xml" value="0.2" />
         <entry key="..\:/AndroidSDK/Licenta/app/src/main/res/layout/home.xml" value="0.20208333333333334" />
         <entry key="..\:/AndroidSDK/Licenta/app/src/main/res/layout/login.xml" value="0.25" />
+        <entry key="..\:/AndroidSDK/Licenta/app/src/main/res/layout/main_page.xml" value="0.2504528985507246" />
+        <entry key="..\:/AndroidSDK/Licenta/app/src/main/res/layout/model.xml" value="0.24320652173913043" />
         <entry key="..\:/AndroidSDK/Licenta/app/src/main/res/layout/register.xml" value="0.25" />
       </map>
     </option>

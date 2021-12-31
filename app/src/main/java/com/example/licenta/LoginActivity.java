@@ -1,5 +1,8 @@
 package com.example.licenta;
 
+import static com.example.licenta.MainActivity.setCurrentUser;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -40,8 +43,12 @@ public class LoginActivity extends AppCompatActivity {
                 ArrayList<Users> usersArrayList= dbHandler.readUsers();
 
                 for(Users us : usersArrayList) {
-                    if (us.getUsername().equals(userText) && us.getPassword().equals(password)) {
-
+                    if (us.getUsername().equals(userText) && us.getPassword().equals(password) && us.getStatus().equals(0)) {
+                        setCurrentUser(userText);
+                        Intent intent = new Intent(LoginActivity.this, MainPage.class);// New activity
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        finish();
                     }
                 }
                 // validating if the text fields are empty or not.
