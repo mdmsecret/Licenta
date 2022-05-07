@@ -6,6 +6,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class DBEventHandler extends SQLiteOpenHelper {
@@ -66,23 +70,33 @@ public class DBEventHandler extends SQLiteOpenHelper {
     }
 
     // this method is use to add new course to our sqlite database.
-    public void addNewEvent(String nume, String prenume, String username, String parola) {
+    public void addNewEvent(String title, String description, String date, String hour,String owner,Integer maxPers,String place,ArrayList<String> participantsArray) {
 
         // on below line we are creating a variable for
         // our sqlite database and calling writable method
         // as we are writing data in our database.
         SQLiteDatabase db = this.getWritableDatabase();
+        //Instert:
+        //ArrayList<String> participantsArray=new ArrayList<String>();
+        //...Add value to inputArray
+        Gson gson = new Gson();
+
+        String participants= gson.toJson(participantsArray);
+
 
         // on below line we are creating a
         // variable for content values.
         ContentValues values = new ContentValues();
-
-        // on below line we are passing all values
-        // along with its key and value pair.
-        values.put(TITLE_COL, nume);
-       // values.put(OWNERS_COL,owners);
-       // values.put(DATE_COL,date);
-       // values.put(TIME_COL,time);
+        String token=new String(owner+title);
+        values.put(TITLE_COL, title);
+        values.put(OWNERS_COL, owner);
+        values.put(DATE_COL,date);
+        values.put(TIME_COL,hour);
+        values.put(STATUS_COL,maxPers);
+        values.put(LOCATION_COL,place);
+        values.put(DESCRIPTION_COL,description);
+        values.put(PARTICIPANTS_COL,participants);
+        values.put(TOKEN_COL,token);
 
 
         // after adding all values we are passing
@@ -93,33 +107,49 @@ public class DBEventHandler extends SQLiteOpenHelper {
         // database after adding database.
         db.close();
     }
-    public ArrayList<Users> readUsers() {
+    public ArrayList<Event> readEvent() {
         // on below line we are creating a
         // database for reading our database.
         SQLiteDatabase db = this.getReadableDatabase();
 
         // on below line we are creating a cursor with query to read data from database.
-        Cursor cursorUsers = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        Cursor cursorEvent = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
 
         // on below line we are creating a new array list.
-        ArrayList<Users> usersArrayList = new ArrayList<>();
+        ArrayList<Event> eventArrayList = new ArrayList<>();
+        ArrayList<String> participantsArray=new ArrayList<String>();
+
+        //convert string to arrayList
+        Gson gson = new Gson();
+        Type type = new TypeToken<ArrayList<String>>() {}.getType();
+
+        //
+
+        //
 
         // moving our cursor to first position.
-        if (cursorUsers.moveToFirst()) {
+        if (cursorEvent.moveToFirst()) {
             do {
                 // on below line we are adding the data from cursor to our array list.
-              /*  usersArrayList.add(new Users(cursorUsers.getString(3),
-                        cursorUsers.getString(4),
-                        cursorUsers.getInt(0)));*/
-            } while (cursorUsers.moveToNext());
+                participantsArray=gson.fromJson(cursorEvent.getString(9), type);
+              eventArrayList.add(new Event(cursorEvent.getString(1),
+                      cursorEvent.getString(2),
+                      cursorEvent.getString(3),
+                      cursorEvent.getString(4),
+                      cursorEvent.getString(6),
+                      cursorEvent.getString(8),
+                      cursorEvent.getString(7),
+                      participantsArray,
+                cursorEvent.getInt(5)));
+            } while (cursorEvent.moveToNext());
             // moving our cursor to next.
         }
         // at last closing our cursor
         // and returning our array list.
-        cursorUsers.close();
-        return usersArrayList;
+        cursorEvent.close();
+        return eventArrayList;
     }
-    public void deleteUser(String useName) {
+    public void deleteEvent(String owner) {
 
         // on below line we are creating
         // a variable to write our database.
@@ -127,7 +157,7 @@ public class DBEventHandler extends SQLiteOpenHelper {
 
         // on below line we are calling a method to delete our
         // course and we are comparing it with our course name.
-        db.delete(TABLE_NAME, "username=?", new String[]{useName});
+        db.delete(TABLE_NAME, "username=?", new String[]{owner});
         db.close();
     }
 

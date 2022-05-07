@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText userEditText,passwordEditText;
-    private Button loginButton;
+    private Button loginButton,createButton;
     private DBHandler dbHandler;
 
     @Override
@@ -31,6 +31,8 @@ public class LoginActivity extends AppCompatActivity {
         // creating a new dbhandler class
         // and passing our context to it.
         dbHandler = new DBHandler(LoginActivity.this);
+        createButton=findViewById(R.id.buttonCreateEvent);
+
 
         // below line is to add on click listener for our add course button.
         loginButton.setOnClickListener(new View.OnClickListener() {

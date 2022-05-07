@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class MainPage extends AppCompatActivity {
-    private Button deleteAccountButton;
+    private Button deleteAccountButton,createButton;
     private DBHandler dbHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,18 @@ public class MainPage extends AppCompatActivity {
         // creating a new dbhandler class
         // and passing our context to it.
         dbHandler = new DBHandler(MainPage.this);
+        createButton=findViewById(R.id.idCreateEventButton);
 
+        createButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPage.this, CreateEventActivity.class);// New activity
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+
+            }
+        });
         // below line is to add on click listener for our add course button.
         deleteAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
