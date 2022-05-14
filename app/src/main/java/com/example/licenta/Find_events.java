@@ -1,5 +1,7 @@
 package com.example.licenta;
 
+import static com.example.licenta.MainActivity.getCurrentUser;
+
 import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;
@@ -83,7 +85,13 @@ public class Find_events extends AppCompatActivity { public static MyAppAdapter 
 
             @Override
             public void onRightCardExit(Object dataObject) {
+                String user=getCurrentUser();
+                ArrayList<String> participants=array.get(0).getParticipants();
+                String token=array.get(0).getToken();
+                String currUser=getCurrentUser();
 
+                participants.add(currUser);
+                dbEventHandler.updateParticipants(participants,token);
                 array.remove(0);
                 myAppAdapter.notifyDataSetChanged();
             }
@@ -190,8 +198,13 @@ public class Find_events extends AppCompatActivity { public static MyAppAdapter 
 
             viewHolder.DataText.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 
-            viewHolder.DataText.setText(parkingList.get(position).getDescription());
-
+            viewHolder.DataText.setText(parkingList.get(position).getTitle());
+            viewHolder.DataText2.setText(parkingList.get(position).getOwner());
+            viewHolder.DataText3.setText(parkingList.get(position).getDate());
+            viewHolder.DataText4.setText(parkingList.get(position).getHour());
+            viewHolder.DataText5.setText(parkingList.get(position).getPlace());
+            //viewHolder.DataText6.setText(parkingList.get(position).getDescription());
+            viewHolder.DataText6.setText("dsalkjdaslkdhahduiwahduiwahduiawhfuefgahgruighuisrehgurieshguirenguirnugnrteugregnuerz");
 
 
             //viewHolder.DataText.autofill((SparseArray<AutofillValue>) parkingList);

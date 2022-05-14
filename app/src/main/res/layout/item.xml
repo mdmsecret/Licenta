@@ -80,45 +80,45 @@
 
             <TextView
                 android:id="@+id/owner"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="25dp"
-                android:textAlignment="gravity"
+                android:padding="4dp"
+                android:textAlignment="center"
                 android:textColor="#787878"
                 android:textSize="16sp"
                 tools:text="" />
             <TextView
                 android:id="@+id/time"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="25dp"
+                android:padding="4dp"
                 android:textAlignment="gravity"
                 android:textColor="#787878"
                 android:textSize="16sp"
                 tools:text="" />
             <TextView
                 android:id="@+id/hour"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="25dp"
+                android:padding="4dp"
                 android:textAlignment="gravity"
                 android:textColor="#787878"
                 android:textSize="16sp"
                 tools:text="" />
             <TextView
                 android:id="@+id/place"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="25dp"
+                android:padding="4dp"
                 android:textAlignment="gravity"
                 android:textColor="#787878"
                 android:textSize="16sp"
                 tools:text="" />
             <TextView
                 android:id="@+id/description"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="25dp"
+                android:padding="4dp"
                 android:textAlignment="gravity"
                 android:textColor="#787878"
                 android:textSize="16sp"

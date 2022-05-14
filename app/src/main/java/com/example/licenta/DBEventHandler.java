@@ -149,6 +149,25 @@ public class DBEventHandler extends SQLiteOpenHelper {
         cursorEvent.close();
         return eventArrayList;
     }
+    public void updateParticipants(ArrayList<String> updatedList,String token) {
+
+        // calling a method to get writable database.
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+        // on below line we are passing all values
+        // along with its key and value pair.
+        Gson gson = new Gson();
+
+        String participants= gson.toJson(updatedList);
+
+        values.put(PARTICIPANTS_COL,participants);
+
+        // on below line we are calling a update method to update our database and passing our values.
+        // and we are comparing it with name of our course which is stored in original name variable.
+        db.update(TABLE_NAME, values, "token=?", new String[]{token});
+        db.close();
+    }
     public void deleteEvent(String owner) {
 
         // on below line we are creating
