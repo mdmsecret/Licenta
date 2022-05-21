@@ -29,6 +29,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".EventSettingsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".Find_events"
             android:exported="true">
             <intent-filter>

@@ -6,28 +6,18 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/idCreateEventButton"
+        android:id="@+id/idProfileSettingstButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="create"
-        app:layout_constraintBottom_toTopOf="@+id/idFindEventButton"
+        app:layout_constraintBottom_toTopOf="@+id/idEventsSettingsButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.896" />
 
     <Button
-        android:id="@+id/idFindEventButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:text="Find events"
-        app:layout_constraintBottom_toTopOf="@+id/idSettingsButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/idSettingsButton"
+        android:id="@+id/idEventsSettingsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="308dp"

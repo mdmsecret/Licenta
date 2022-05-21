@@ -16,14 +16,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class MainPage extends AppCompatActivity {
-    private Button deleteAccountButton,createButton,findEventButton;
+    private Button settingsAccountButton,createButton,findEventButton;
     private DBHandler dbHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_page);
 
-        deleteAccountButton = findViewById(R.id.idDeleteAccountButton);
+        settingsAccountButton = findViewById(R.id.idSettingsButton);
 
         // creating a new dbhandler class
         // and passing our context to it.
@@ -52,8 +52,18 @@ public class MainPage extends AppCompatActivity {
 
             }
         });
+        settingsAccountButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainPage.this, EventSettingsActivity.class);// New activity
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+
+            }
+        });
         // below line is to add on click listener for our add course button.
-        deleteAccountButton.setOnClickListener(new View.OnClickListener() {
+        settingsAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
