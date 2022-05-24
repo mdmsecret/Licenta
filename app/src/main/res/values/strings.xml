@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Licenta</string>
+    <string name="the_place_t">
+
+        The place to connect with people
+    </string>
+
 </resources>

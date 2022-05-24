@@ -1,30 +1,15 @@
 package com.example.licenta;
 
-import static com.example.licenta.MainActivity.getCurrentUser;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.licenta.R;
-import com.lorentzos.flingswipe.SwipeFlingAdapterView;
-
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
-public class EventSettingsActivity extends Activity
+public class EventSettingsActivity2 extends Activity
 {
     private RecyclerView courseRV;
 
@@ -37,9 +22,9 @@ public class EventSettingsActivity extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.event_settings);
+        setContentView(R.layout.event_settings2);
         courseRV = findViewById(R.id.idRVCourse);
-        eventHandler= new DBEventHandler(EventSettingsActivity.this);
+        eventHandler= new DBEventHandler(EventSettingsActivity2.this);
         array = eventHandler.readEvent();
 
         // here we have created new array list and added data to it.
@@ -56,7 +41,7 @@ public class EventSettingsActivity extends Activity
         //courseModelArrayList.add(new ListModel("HTML and CSS","dsa","disao"));
         for (int i = 0; i < array.size(); i++) {
             Event event_aug=array.get(i);
-            if(event_aug.getParticipants().contains("apa")){
+            if(event_aug.getOwner().contains("mdm")){
                 courseModelArrayList.add(new ListModel("nr"+i,event_aug.getDate(),event_aug.getHour(),event_aug));
             }
         }

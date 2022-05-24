@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class OptionsActivity extends AppCompatActivity {
-    private Button profileSettingsButton,eventSettingsButtons,findEventButton;
+    private Button profileSettingsButton,eventSettingsButtons,eventSettingsButtons2;
     private DBHandler dbHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +44,18 @@ public class OptionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(OptionsActivity.this, EventSettingsActivity.class);// New activity
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+        eventSettingsButtons2=findViewById(R.id.idCreateEventButton);
+
+        eventSettingsButtons2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OptionsActivity.this, EventSettingsActivity2.class);// New activity
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 finish();

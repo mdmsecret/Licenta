@@ -33,6 +33,20 @@
         <entry key="..\:/AndroidSDK/Licenta2/app/src/main/res/layout/sma.xml" value="0.24094202898550723" />
         <entry key="..\:/AndroidSDK/Licenta2/app/src/main/res/layout/test.xml" value="0.20520833333333333" />
         <entry key="..\:/AndroidSDK/Licenta2/app/src/main/res/layout/text_view.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/gfgimage.xml" value="0.22135416666666666" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/list_image.xml" value="0.22135416666666666" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/style.xml" value="0.3828125" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/cardview.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/cardview2.xml" value="0.28306159420289856" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/course_rv_item.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/event_create.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/event_settings.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/event_settings2.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/item.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/login.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/options_activity.xml" value="0.28306159420289856" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/profile_settings.xml" value="0.28306159420289856" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/start_page.xml" value="0.276268115942029" />
       </map>
     </option>
   </component>

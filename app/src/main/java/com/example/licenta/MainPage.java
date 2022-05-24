@@ -33,14 +33,14 @@ public class MainPage extends AppCompatActivity {
         findEventButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainPage.this, CreateEventActivity.class);// New activity
+                Intent intent = new Intent(MainPage.this, Find_events.class);// New activity
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 finish();
 
             }
         });
-        createButton=findViewById(R.id.idCreateEventButton);
+        /*createButton=findViewById(R.id.idCreateEventButton);
 
         createButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,7 +51,7 @@ public class MainPage extends AppCompatActivity {
                 finish();
 
             }
-        });
+        });*/
         settingsAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,40 +62,7 @@ public class MainPage extends AppCompatActivity {
 
             }
         });
-        // below line is to add on click listener for our add course button.
-        settingsAccountButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainPage.this);
-                builder.setCancelable(true);
-                builder.setTitle("Title");
-                builder.setMessage("Message");
-                builder.setPositiveButton("Confirm",
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dbHandler.deleteUser(getCurrentUser());
-                               // Toast.makeText(MainPage.this, getCurrentUser(), Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(MainPage.this, MainActivity.class);// New activity
-                                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                startActivity(intent);
-                                finish();
-
-                            }
-                        });
-                builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                    }
-                });
-
-                AlertDialog dialog = builder.create();
-                dialog.show();
-
-            }
-        });
 
     }
 }

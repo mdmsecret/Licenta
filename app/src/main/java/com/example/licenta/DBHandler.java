@@ -112,7 +112,10 @@ public class DBHandler extends SQLiteOpenHelper {
                 usersArrayList.add(new Users(cursorUsers.getString(3),
                         cursorUsers.getString(6),
                         cursorUsers.getInt(0),
-                        cursorUsers.getInt(5)));
+                        cursorUsers.getInt(5),
+                        cursorUsers.getString(1),
+                        cursorUsers.getString(2),
+                        cursorUsers.getString(4)));
             } while (cursorUsers.moveToNext());
             // moving our cursor to next.
         }
