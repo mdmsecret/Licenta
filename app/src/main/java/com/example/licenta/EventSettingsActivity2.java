@@ -1,5 +1,7 @@
 package com.example.licenta;
 
+import static com.example.licenta.MainActivity.getCurrentUser;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.widget.Button;
@@ -38,10 +40,11 @@ public class EventSettingsActivity2 extends Activity
         courseModelArrayList.add(new ListModel("HTML and CSS", 4, R.drawable.gfgimage));
 */
         courseModelArrayList = new ArrayList<>();
+        String currUser=getCurrentUser();
         //courseModelArrayList.add(new ListModel("HTML and CSS","dsa","disao"));
         for (int i = 0; i < array.size(); i++) {
             Event event_aug=array.get(i);
-            if(event_aug.getOwner().contains("mdm")){
+            if(event_aug.getOwner().contains(currUser)){
                 courseModelArrayList.add(new ListModel("nr"+i,event_aug.getDate(),event_aug.getHour(),event_aug));
             }
         }

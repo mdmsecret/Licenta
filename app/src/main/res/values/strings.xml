@@ -2,7 +2,11 @@
     <string name="app_name">Licenta</string>
     <string name="the_place_t">
 
-        The place to connect with people
+        The place to connect \n with people
+    </string>
+    <string name="agora">
+
+    Agora
     </string>
 
 </resources>

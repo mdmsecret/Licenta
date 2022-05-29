@@ -3,89 +3,206 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#030231">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086">
+
+        <TextView
+            android:id="@+id/agora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/agora"
+            android:textAppearance="@style/agora" />
+
+        <View
+            android:id="@+id/group_356"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/icon" />
+    </FrameLayout>
+
+    <TextView
+
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="First Name"
+        android:textAppearance="@style/the_place_t"
+        app:layout_constraintBottom_toTopOf="@+id/idNumeTxt"
+        app:layout_constraintStart_toStartOf="@+id/idNumeTxt" />
 
     <EditText
         android:id="@+id/idNumeTxt"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginTop="12dp"
-        android:hint="Nume"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle"
+
+        android:paddingLeft="10dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idUserNameTxt" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/idUserNameTxt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.27" />
+
+    <TextView
+
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Last Name"
+        android:textAppearance="@style/the_place_t"
+        app:layout_constraintBottom_toTopOf="@+id/idPrenumeTxt"
+        app:layout_constraintStart_toStartOf="@+id/idPrenumeTxt" />
 
     <EditText
         android:id="@+id/idPrenumeTxt"
-        android:layout_width="280dp"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+
+        android:background="@drawable/rectangle"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/idUserNameTxt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/idNumeTxt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.27" />
+
+    <TextView
+
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginTop="68dp"
-        android:hint="Prenume"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idNumeTxt" />
+        android:layout_marginBottom="10dp"
+        android:text="Username"
+        android:textAppearance="@style/the_place_t"
+        app:layout_constraintBottom_toTopOf="@+id/idUserNameTxt"
+        app:layout_constraintStart_toStartOf="@+id/idUserNameTxt" />
 
     <EditText
         android:id="@+id/idUserNameTxt"
         android:layout_width="280dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_margin="10dp"
-        android:layout_marginTop="8dp"
-        android:hint="Username"
+        android:background="@drawable/rectangle"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idPasswordTxtVer" />
+        app:layout_constraintTop_toBottomOf="@+id/idNumeTxt"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <TextView
+
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Password"
+        android:textAppearance="@style/the_place_t"
+        app:layout_constraintBottom_toTopOf="@+id/idPasswordTxt"
+        app:layout_constraintStart_toStartOf="@+id/idPasswordTxt" />
 
     <EditText
         android:id="@+id/idPasswordTxt"
         android:layout_width="280dp"
         android:layout_height="40dp"
         android:layout_margin="10dp"
-        android:hint="Parola"
+        android:background="@drawable/rectangle"
+        android:paddingLeft="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.199" />
+        app:layout_constraintTop_toBottomOf="@+id/idEmailText"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Password"
+        android:textAppearance="@style/the_place_t"
+        app:layout_constraintBottom_toTopOf="@+id/idPasswordTxtVer"
+        app:layout_constraintStart_toStartOf="@+id/idPasswordTxtVer" />
 
     <EditText
         android:id="@+id/idPasswordTxtVer"
         android:layout_width="280dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_margin="10dp"
-        android:layout_marginTop="12dp"
-        android:hint="Verificare Parola"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/rectangle"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idPasswordTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/idPasswordTxt"
+        app:layout_constraintVertical_bias="0.35" />
 
     <Button
         android:id="@+id/idRegisterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_2"
         android:text="Register"
+        android:textAppearance="@style/the_place_t"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idEmailText" />
+        app:layout_constraintTop_toBottomOf="@+id/idPasswordTxtVer"
+        app:layout_constraintVertical_bias="0.777" />
+
+    <TextView
+
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="E-mail"
+        android:textAppearance="@style/the_place_t"
+        app:layout_constraintBottom_toTopOf="@+id/idEmailText"
+        app:layout_constraintStart_toStartOf="@+id/idEmailText" />
 
     <EditText
         android:id="@+id/idEmailText"
         android:layout_width="280dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_margin="10dp"
-        android:hint="E-mail"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rectangle"
         android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/idPrenumeTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/idUserNameTxt"
+        app:layout_constraintVertical_bias="0.13" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,7 +21,7 @@ public class OptionsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_page);
+        setContentView(R.layout.options_activity);
 
         profileSettingsButton = findViewById(R.id.idProfileSettingstButton);
 
@@ -38,7 +38,7 @@ public class OptionsActivity extends AppCompatActivity {
 
             }
         });
-        eventSettingsButtons=findViewById(R.id.idCreateEventButton);
+        eventSettingsButtons=findViewById(R.id.idEventsSettingsButton);
 
         eventSettingsButtons.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +50,7 @@ public class OptionsActivity extends AppCompatActivity {
 
             }
         });
-        eventSettingsButtons2=findViewById(R.id.idCreateEventButton);
+        eventSettingsButtons2=findViewById(R.id.idEventsSettings2Button);
 
         eventSettingsButtons2.setOnClickListener(new View.OnClickListener() {
             @Override
