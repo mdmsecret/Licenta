@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="280dp"
+    android:layout_height="400dp"
     android:layout_gravity="center"
     android:layout_marginBottom="48dp"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
+    android:background="@drawable/shape_for_cards"
     android:layout_marginTop="64dp">
 
     <FrameLayout
@@ -20,7 +21,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="6dp"
-            android:background="@drawable/shape2"
+            android:background="@drawable/shape_for_cards"
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
@@ -34,8 +35,9 @@
             android:layout_marginBottom="12dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:background="@drawable/shape1"
+            android:background="@drawable/shape_for_cards"
             android:gravity="center_horizontal"
+
             android:orientation="vertical" />
 
     </FrameLayout>
@@ -44,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="18dp"
-        android:background="@drawable/shape"
+
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
@@ -56,9 +58,11 @@
 
             <ImageView
                 android:id="@+id/cardImage"
-                android:layout_width="300dp"
-                android:layout_height="200dp"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:background="@drawable/shape_for_image"
                 android:padding="4dp"
+                android:paddingTop="8dp"
                 android:scaleType="centerCrop" />
         </FrameLayout>
 
@@ -70,23 +74,48 @@
 
             <TextView
                 android:id="@+id/title"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
                 android:textAlignment="center"
-                android:textColor="#787878"
-                android:textSize="16sp"
-                tools:text="" />
+                android:textAppearance="@style/style_for_cards"
+                tools:text="amdsdpdsadaodm" />
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/owner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:textAlignment="center"
-                android:textColor="#787878"
-                android:textSize="16sp"
-                tools:text="" />
+                <View
+                    android:id="@+id/calendar_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@android:drawable/ic_menu_myplaces" />
+
+                <TextView
+                    android:id="@+id/owner"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textAlignment="center"
+                    android:textColor="#787878"
+                    android:textSize="16sp"
+                    tools:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal">
+            <View
+                android:id="@+id/time_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:background="@android:drawable/ic_menu_my_calendar" />
+
             <TextView
                 android:id="@+id/time"
                 android:layout_width="match_parent"
@@ -95,7 +124,20 @@
                 android:textAlignment="gravity"
                 android:textColor="#787878"
                 android:textSize="16sp"
-                tools:text="" />
+                tools:text="dsa" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal">
+            <View
+                android:id="@+id/hour_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:background="@android:drawable/ic_menu_recent_history" />
+
             <TextView
                 android:id="@+id/hour"
                 android:layout_width="match_parent"
@@ -105,6 +147,20 @@
                 android:textColor="#787878"
                 android:textSize="16sp"
                 tools:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/place_1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@android:drawable/ic_menu_mapmode" />
+
             <TextView
                 android:id="@+id/place"
                 android:layout_width="match_parent"
@@ -114,11 +170,14 @@
                 android:textColor="#787878"
                 android:textSize="16sp"
                 tools:text="" />
+            </LinearLayout>
+
             <TextView
                 android:id="@+id/description"
-                android:layout_width="match_parent"
+                android:layout_width="260dp"
                 android:layout_height="wrap_content"
                 android:padding="4dp"
+                android:layout_gravity="center_vertical|center_horizontal"
                 android:textAlignment="gravity"
                 android:textColor="#787878"
                 android:textSize="16sp"

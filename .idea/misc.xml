@@ -33,24 +33,32 @@
         <entry key="..\:/AndroidSDK/Licenta2/app/src/main/res/layout/sma.xml" value="0.24094202898550723" />
         <entry key="..\:/AndroidSDK/Licenta2/app/src/main/res/layout/test.xml" value="0.20520833333333333" />
         <entry key="..\:/AndroidSDK/Licenta2/app/src/main/res/layout/text_view.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/circle.xml" value="0.3472222222222222" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/gfgimage.xml" value="0.22135416666666666" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3527777777777778" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.22135416666666666" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/list_image.xml" value="0.22135416666666666" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/rectangle.xml" value="0.3527777777777778" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/rectangle_2.xml" value="0.3828125" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/rectangle_for_main_page.xml" value="0.3472222222222222" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/shape.xml" value="0.3527777777777778" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/shape1.xml" value="0.22135416666666666" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/shape2.xml" value="0.22135416666666666" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/shape_for_cards.xml" value="0.22135416666666666" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/shape_for_image.xml" value="0.22135416666666666" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/shape_for_options.xml" value="0.3472222222222222" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/style.xml" value="0.3828125" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/drawable/user.xml" value="0.3472222222222222" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/cardview.xml" value="0.20520833333333333" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/cardview2.xml" value="0.28306159420289856" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/course_rv_item.xml" value="0.20520833333333333" />
-        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/event_create.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/event_create.xml" value="0.6231060606060606" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/event_settings.xml" value="0.20520833333333333" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/event_settings2.xml" value="0.20520833333333333" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/find_events.xml" value="0.20520833333333333" />
-        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/item.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/item.xml" value="0.33" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/login.xml" value="0.25" />
-        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/main_page.xml" value="0.20520833333333333" />
+        <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/main_page.xml" value="0.25015873015873014" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/options_activity.xml" value="0.28306159420289856" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/profile_settings.xml" value="0.28306159420289856" />
         <entry key="..\:/AndroidSDK/LicentaRev/app/src/main/res/layout/register.xml" value="0.25" />

@@ -66,9 +66,9 @@ public class MainPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainPage.this, CreateEventActivity.class);// New activity
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
-                finish();
+                //finish();
 
             }
         });
@@ -245,6 +245,7 @@ public class MainPage extends AppCompatActivity {
             //viewHolder.DataText6.setText(parkingList.get(position).getDescription());
             viewHolder.DataText6.setText("dsalkjdaslkdhahduiwahduiwahduiawhfuefgahgruighuisrehgurieshguirenguirnugnrteugregnuerz");
 
+            //viewHolder.cardImage.setImageResource(R.drawable.shape_for_image);
 
             //viewHolder.DataText.autofill((SparseArray<AutofillValue>) parkingList);
 
