@@ -1,21 +1,15 @@
 package com.example.licenta;
 
 
-import static com.example.licenta.MainActivity.getCurrentUser;
-
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lorentzos.flingswipe.SwipeFlingAdapterView;
@@ -93,7 +87,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.Viewholder> im
             super(itemView);
             courseIV = itemView.findViewById(R.id.idIVCourseImage);
             courseNameTV = itemView.findViewById(R.id.idTVCourseName);
-            courseRatingTV = itemView.findViewById(R.id.idTVCourseRating);
+            courseRatingTV = itemView.findViewById(R.id.idCardviewTiltle);
             notInterestedAnymore=itemView.findViewById(R.id.notInterestedAnymoreButton);
 
         }

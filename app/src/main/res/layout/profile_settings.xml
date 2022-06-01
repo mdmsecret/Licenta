@@ -3,111 +3,193 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#03045E">
+
+    <TextView
+
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="First Name"
+        android:textAppearance="@style/the_place_t"
+        app:layout_constraintBottom_toTopOf="@+id/editFistName"
+        app:layout_constraintStart_toStartOf="@+id/editFistName" />
 
     <EditText
         android:id="@+id/editFistName"
-        android:layout_width="166dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="16dp"
-        android:ems="10"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="185dp"
+        android:paddingLeft="10dp"
+        android:layout_marginEnd="230dp"
+        android:layout_marginBottom="506dp"
+        android:background="@drawable/rectangle"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/editEmail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Last  Name"
+        android:textAppearance="@style/the_place_t"
+        app:layout_constraintBottom_toTopOf="@+id/editLastName"
+        app:layout_constraintStart_toStartOf="@+id/editLastName" />
+
     <EditText
         android:id="@+id/editLastName"
-        android:layout_width="154dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:layout_marginStart="241dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginEnd="50dp"
+
+        android:layout_marginBottom="506dp"
+        android:background="@drawable/rectangle"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/editEmail"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
-        app:layout_constraintStart_toEndOf="@+id/editFistName"
-        app:layout_constraintTop_toTopOf="parent" /><![CDATA[
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    tools:layout_editor_absoluteX="100dp" />
+    <TextView
 
-
-
-
-
-    tools:layout_editor_absoluteX="100dp" />
-
-
-
-    ]]>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="E-mail"
+        android:textAppearance="@style/the_place_t"
+        app:layout_constraintBottom_toTopOf="@+id/editEmail"
+        app:layout_constraintStart_toStartOf="@+id/editEmail" />
 
     <EditText
         android:id="@+id/editEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="132dp"
-        android:ems="10"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="160dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/rectangle"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toTopOf="@+id/editPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.549"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.536" />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Password"
+        android:textAppearance="@style/the_place_t"
+        app:layout_constraintBottom_toTopOf="@+id/editPassword"
+        app:layout_constraintStart_toStartOf="@+id/editPassword" />
 
     <EditText
         android:id="@+id/editPassword"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="381dp"
+        android:layout_marginBottom="310dp"
+
+        android:background="@drawable/rectangle"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
+        android:layout_marginBottom="10dp"
+        android:text="Comfirm Password"
+        android:textAppearance="@style/the_place_t"
         app:layout_constraintBottom_toTopOf="@+id/editCofirmPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="521dp" /><![CDATA[
-        tools:layout_editor_absoluteX="100dp" />
-
-    ]]>
+        app:layout_constraintStart_toStartOf="@+id/editCofirmPassword" />
 
     <EditText
         android:id="@+id/editCofirmPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="168dp"
-        android:ems="10"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="479dp"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="212dp"
+
+        android:background="@drawable/rectangle"
         android:inputType="textPersonName"
-        android:text="Name"
+
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/saveChangesButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle_3"
+        android:text="Save"
+        android:textAppearance="@style/the_place_t"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.318"
+        app:layout_constraintHorizontal_bias="0.209"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.939" />
+        app:layout_constraintVertical_bias="0.845" />
 
     <Button
         android:id="@+id/deleteUserButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle_3"
+        android:text="Delete user"
+        android:textAppearance="@style/the_place_t"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.719"
+        app:layout_constraintHorizontal_bias="0.828"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.939" />
+        app:layout_constraintVertical_bias="0.845" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/circle_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081"
+        app:srcCompat="@drawable/greek" />
 </androidx.constraintlayout.widget.ConstraintLayout>

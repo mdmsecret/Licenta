@@ -36,9 +36,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);// New activity
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
-                finish(); // Call once you redirect to another activity
+                //finish(); // Call once you redirect to another activity
 
             }
         });
@@ -57,9 +57,9 @@ public class LoginActivity extends AppCompatActivity {
                     if (us.getUsername().equals(userText) && us.getPassword().equals(password) && us.getStatus().equals(0)) {
                         setCurrentUser(userText);
                         Intent intent = new Intent(LoginActivity.this, MainPage.class);// New activity
-                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
-                        finish();
+                        //finish();
                     }
                 }
                 // validating if the text fields are empty or not.

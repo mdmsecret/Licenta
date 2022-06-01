@@ -26,7 +26,7 @@ public class EventSettingsActivity2 extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.event_settings2);
         courseRV = findViewById(R.id.idRVCourse);
-        eventHandler= new DBEventHandler(EventSettingsActivity2.this);
+        eventHandler = new DBEventHandler(EventSettingsActivity2.this);
         array = eventHandler.readEvent();
 
         // here we have created new array list and added data to it.
@@ -40,15 +40,19 @@ public class EventSettingsActivity2 extends Activity
         courseModelArrayList.add(new ListModel("HTML and CSS", 4, R.drawable.gfgimage));
 */
         courseModelArrayList = new ArrayList<>();
-        String currUser=getCurrentUser();
-        //courseModelArrayList.add(new ListModel("HTML and CSS","dsa","disao"));
-        for (int i = 0; i < array.size(); i++) {
-            Event event_aug=array.get(i);
-            if(event_aug.getOwner().contains(currUser)){
-                courseModelArrayList.add(new ListModel("nr"+i,event_aug.getDate(),event_aug.getHour(),event_aug));
+        String currUser = getCurrentUser();
+        ArrayList<String> dummy = new ArrayList<>();
+        if (array.size() == 0) {
+            courseModelArrayList.add(new ListModel("Dummy", "Dummy", "Dummy", new Event("Dummy", "Dummy", "Dummy", "Dummy", "Dummy", "Dummy", "Dummy", dummy, 1)));
+        } else {
+
+            for (int i = 0; i < array.size(); i++) {
+                Event event_aug = array.get(i);
+                if (event_aug.getOwner().contains(currUser)) {
+                    courseModelArrayList.add(new ListModel("nr" + i, event_aug.getDate(), event_aug.getHour(), event_aug));
+                }
             }
         }
-
         // we are initializing our adapter class and passing our arraylist to it.
         ListAdapter courseAdapter = new ListAdapter(this, courseModelArrayList);
 

@@ -87,7 +87,7 @@ public class ListAdapter2 extends RecyclerView.Adapter<ListAdapter2.Viewholder> 
             super(itemView);
             courseIV = itemView.findViewById(R.id.idIVCourseImage);
             courseNameTV = itemView.findViewById(R.id.idTVCourseName);
-            courseRatingTV = itemView.findViewById(R.id.idTVCourseRating);
+            courseRatingTV = itemView.findViewById(R.id.idCardviewTiltle);
             notInterestedAnymore=itemView.findViewById(R.id.notInterestedAnymoreButton);
 
         }

@@ -41,8 +41,8 @@ public class ProfileSettingsActivity extends AppCompatActivity {
         email=findViewById(R.id.editEmail);
         password=findViewById(R.id.editPassword);
         confirmPassword=findViewById(R.id.editCofirmPassword);
-        //String currentUser= getCurrentUser();
-        String currentUser="mdmsecret";
+        String currentUser= getCurrentUser();
+
         ArrayList<Users> usersArrayList= dbHandler.readUsers();
         for(Users us : usersArrayList) {
             if (us.getUsername().equals(currentUser) ) {
@@ -57,8 +57,8 @@ public class ProfileSettingsActivity extends AppCompatActivity {
         saveChangesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                dbHandler.updateUser(lastName.getText().toString(),firstName.getText().toString(),currentUser,email.getText().toString(),password.getText().toString(),1);
+                if(password.getText().toString()==confirmPassword.getText().toString())
+                dbHandler.updateUser(lastName.getText().toString(),firstName.getText().toString(),currentUser,password.getText().toString(),email.getText().toString(),1);
                 Intent intent = new Intent(ProfileSettingsActivity.this, OptionsActivity.class);// New activity
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);

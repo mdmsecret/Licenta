@@ -10,7 +10,8 @@
     app:cardElevation="8dp"
     app:cardMaxElevation="10dp"
     app:cardPreventCornerOverlap="true"
-    app:cardUseCompatPadding="true">
+    app:cardUseCompatPadding="true"
+    >
 
     <!--
         In the above cardview widget
@@ -26,7 +27,8 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="266dp">
+        android:layout_height="200dp"
+        android:background="@drawable/cardview_shape">
 
         <!--ImageVIew to display our Course Image-->
 
@@ -39,13 +41,14 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="92dp"
-            android:layout_marginTop="132dp"
-            android:layout_marginEnd="54dp"
-
+            android:layout_marginTop="85dp"
+            android:layout_marginEnd="45dp"
             android:layout_marginBottom="10dp"
             android:contentDescription="@string/app_name"
             android:padding="5dp"
-            android:src="@drawable/gfgimage" />
+
+            android:text="Hour"
+            android:textAppearance="@style/the_place_t" />
 
         <TextView
             android:id="@+id/idTVCourseName"
@@ -54,25 +57,26 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="135dp"
-            android:layout_marginEnd="216dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="85dp"
+            android:layout_marginEnd="218dp"
             android:layout_marginRight="61dp"
             android:layout_marginBottom="330dp"
-            android:text="dsadsa"
-            android:textColor="@color/black"
-            android:textSize="18sp"
+            android:text="Date"
+            android:textAppearance="@style/the_place_t"
+
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/idTVCourseRating"
-            android:layout_width="135dp"
-            android:layout_height="59dp"
+            android:id="@+id/idCardviewTiltle"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:drawablePadding="2dp"
-            android:text="adsadasdas" />
+            android:text="Title"
+            android:textAppearance="@style/Title" />
 
         <Button
             android:id="@+id/notInterestedAnymoreButton"
@@ -80,9 +84,22 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="183dp"
-            android:layout_marginEnd="154dp"
-            android:text="Button" />
+            android:layout_marginTop="153dp"
+            android:layout_marginEnd="158dp"
+            android:textAppearance="@style/the_place_t"
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="#FC3B3B"
+            android:text="~Not interested" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="356dp"
+            android:layout_height="7dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="54dp"
+            android:background="@drawable/rectangle_4" />
 
         <!--Text VIew to display COurse Rating-->
         <!--Image used in present in drawable folder-->

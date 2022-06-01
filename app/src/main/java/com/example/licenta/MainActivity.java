@@ -23,35 +23,26 @@ public class MainActivity extends AppCompatActivity {
 
     public static String currentUser;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    private Button letsStart;
 
-        registerButton = findViewById(R.id.idRegisterButtonMain);
-        loginButton =findViewById(R.id.idLoginButtonMain);
-        dbHandler = new DBHandler(MainActivity.this);
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
 
-        registerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);// New activity
-                //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                //finish(); // Call once you redirect to another activity
+            setContentView(R.layout.start_page);
+            letsStart=findViewById(R.id.letsStartButton);
+            letsStart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);// New activity
+                    //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    //finish(); // Call once you redirect to another activity
 
-            }
-        });
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);// New activity
-                //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                //finish(); // Call once you redirect to another activity
+                }
+            });
 
-            }
-        });
+        }
 
     }
-}
+
