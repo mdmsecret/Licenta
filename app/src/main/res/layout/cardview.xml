@@ -82,14 +82,16 @@
             android:id="@+id/notInterestedAnymoreButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="153dp"
-            android:layout_marginEnd="158dp"
-            android:textAppearance="@style/the_place_t"
+            android:layout_marginStart="88dp"
+            android:layout_marginTop="151dp"
+            android:layout_marginEnd="91dp"
             android:background="?android:attr/selectableItemBackground"
-            android:textColor="#FC3B3B"
-            android:text="~Not interested" />
+            android:text="~Not interested anymore"
+            android:textAppearance="@style/the_place_t"
+            android:textColor="#FC3B3B" />
 
         <View
             android:id="@+id/view3"

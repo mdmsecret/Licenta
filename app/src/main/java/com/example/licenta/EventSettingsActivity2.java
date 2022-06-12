@@ -49,7 +49,7 @@ public class EventSettingsActivity2 extends Activity
             for (int i = 0; i < array.size(); i++) {
                 Event event_aug = array.get(i);
                 if (event_aug.getOwner().contains(currUser)) {
-                    courseModelArrayList.add(new ListModel("nr" + i, event_aug.getDate(), event_aug.getHour(), event_aug));
+                    courseModelArrayList.add(new ListModel( "Date:"+event_aug.getDate(),event_aug.getTitle(), "Hour:\n"+event_aug.getHour(), event_aug));
                 }
             }
         }

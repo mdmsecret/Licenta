@@ -100,7 +100,7 @@
                     android:layout_height="wrap_content"
                     android:padding="4dp"
                     android:textAlignment="center"
-                    android:textColor="#787878"
+                    android:textColor="#FFFFFF"
                     android:textSize="16sp"
                     tools:text="" />
             </LinearLayout>
@@ -116,15 +116,15 @@
                 android:layout_marginLeft="20dp"
                 android:background="@android:drawable/ic_menu_my_calendar" />
 
-            <TextView
-                android:id="@+id/time"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:textAlignment="gravity"
-                android:textColor="#787878"
-                android:textSize="16sp"
-                tools:text="dsa" />
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textAlignment="gravity"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    tools:text="dsa" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="300dp"
@@ -138,15 +138,15 @@
                 android:layout_marginLeft="20dp"
                 android:background="@android:drawable/ic_menu_recent_history" />
 
-            <TextView
-                android:id="@+id/hour"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:textAlignment="gravity"
-                android:textColor="#787878"
-                android:textSize="16sp"
-                tools:text="" />
+                <TextView
+                    android:id="@+id/hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textAlignment="gravity"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    tools:text="" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="300dp"
@@ -161,25 +161,25 @@
                     android:layout_marginLeft="20dp"
                     android:background="@android:drawable/ic_menu_mapmode" />
 
-            <TextView
-                android:id="@+id/place"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:textAlignment="gravity"
-                android:textColor="#787878"
-                android:textSize="16sp"
-                tools:text="" />
+                <TextView
+                    android:id="@+id/place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:textAlignment="gravity"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    tools:text="" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/description"
                 android:layout_width="260dp"
                 android:layout_height="wrap_content"
-                android:padding="4dp"
                 android:layout_gravity="center_vertical|center_horizontal"
+                android:padding="4dp"
                 android:textAlignment="gravity"
-                android:textColor="#787878"
+                android:textColor="#FFFFFF"
                 android:textSize="16sp"
                 tools:text="" />
         </LinearLayout>

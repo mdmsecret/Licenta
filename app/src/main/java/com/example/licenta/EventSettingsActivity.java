@@ -56,8 +56,9 @@ public class EventSettingsActivity extends Activity
         //courseModelArrayList.add(new ListModel("HTML and CSS","dsa","disao"));
         for (int i = 0; i < array.size(); i++) {
             Event event_aug=array.get(i);
-            if(event_aug.getParticipants().contains("apa")){
-                courseModelArrayList.add(new ListModel("nr"+i,event_aug.getDate(),event_aug.getHour(),event_aug));
+            String currUser=getCurrentUser();
+            if(event_aug.getParticipants().contains(currUser)){
+                courseModelArrayList.add(new ListModel( "Date:"+event_aug.getDate(),event_aug.getTitle(), "Hour:\n"+event_aug.getHour(), event_aug));
             }
         }
 

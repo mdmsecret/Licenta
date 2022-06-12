@@ -72,8 +72,8 @@ public class ProfileSettingsActivity extends AppCompatActivity {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(ProfileSettingsActivity.this);
                 builder.setCancelable(true);
-                builder.setTitle("Title");
-                builder.setMessage("Message");
+                builder.setTitle("Deletion");
+                builder.setMessage("Are you sure you want to delete your profile?");
                 builder.setPositiveButton("Confirm",
                         new DialogInterface.OnClickListener() {
                             @Override

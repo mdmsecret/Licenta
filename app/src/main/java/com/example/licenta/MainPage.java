@@ -243,7 +243,7 @@ public class MainPage extends AppCompatActivity {
             viewHolder.DataText4.setText(parkingList.get(position).getHour());
             viewHolder.DataText5.setText(parkingList.get(position).getPlace());
             //viewHolder.DataText6.setText(parkingList.get(position).getDescription());
-            viewHolder.DataText6.setText("dsalkjdaslkdhahduiwahduiwahduiawhfuefgahgruighuisrehgurieshguirenguirnugnrteugregnuerz");
+            viewHolder.DataText6.setText(parkingList.get(position).getDescription());
 
             //viewHolder.cardImage.setImageResource(R.drawable.shape_for_image);
 

@@ -52,7 +52,11 @@ public class LoginActivity extends AppCompatActivity {
                 String userText = userEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
                 ArrayList<Users> usersArrayList= dbHandler.readUsers();
-
+                try {
+                    password=AESUtils.encrypt(password);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 for(Users us : usersArrayList) {
                     if (us.getUsername().equals(userText) && us.getPassword().equals(password) && us.getStatus().equals(0)) {
                         setCurrentUser(userText);

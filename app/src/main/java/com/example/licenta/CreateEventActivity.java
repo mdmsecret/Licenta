@@ -98,14 +98,14 @@ public class CreateEventActivity extends AppCompatActivity {
                 String status_aug=eMaxPers.getText().toString();
                 Integer status=Integer.parseInt(status_aug);
                 ArrayList<String> participantsArray=new ArrayList<String>();
-                participantsArray.add("apa");
-                participantsArray.add("apa2");
+               /* participantsArray.add("apa");
+                participantsArray.add("apa2");*/
                 if (title.isEmpty()||hour.isEmpty()||description.isEmpty()||place.isEmpty()||date.isEmpty()||status_aug.isEmpty()) {
                     Toast.makeText(CreateEventActivity.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                //String owner=getCurrentUser();
-                dbHandler.addNewEvent(title,description,date,hour,"mdm",status,place,participantsArray);
+                String owner=getCurrentUser();
+                dbHandler.addNewEvent(title,description,date,hour,owner,status,place,participantsArray);
 
                 // after adding the data we are displaying a toast message.
                 //Toast.makeText(RegisterActivity.this, "Course has been added.", Toast.LENGTH_SHORT).show();

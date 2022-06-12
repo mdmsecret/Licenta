@@ -1,6 +1,8 @@
 package com.example.licenta;
 
 
+import static com.example.licenta.MainActivity.getCurrentUser;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,10 +51,10 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.Viewholder> im
                 //String user=getCurrentUser();
                 ArrayList<String> participants_new=model.getEvent().getParticipants();
                 String token=model.getEvent().getToken();
-               // String currUser=getCurrentUser();
+                String currUser=getCurrentUser();
                 dbEventHandler= new DBEventHandler(context);
                 Toast.makeText(context, token, Toast.LENGTH_SHORT).show();
-                participants_new.remove("apa");
+                participants_new.remove(currUser);
                 dbEventHandler.updateParticipants(participants_new,token);
                 //ListAdapter.this.notifyAll();
                 //onItemClickValue.onValueChange(testInt)

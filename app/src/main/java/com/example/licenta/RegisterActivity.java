@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -68,8 +69,14 @@ public class RegisterActivity extends AppCompatActivity {
 
                     // on below line we are calling a method to add new
                     // course to sqlite data and pass all our values to it.
-                Toast.makeText(RegisterActivity.this, "Inregistrare cu succes", Toast.LENGTH_SHORT).show();
-                    dbHandler.addNewUser(nume, prenume, username, password,email,0);
+                //Toast.makeText(RegisterActivity.this, "Inregistrare cu succes", Toast.LENGTH_SHORT).show();
+                try {
+                    password=AESUtils.encrypt(password);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                Toast.makeText(RegisterActivity.this, password, Toast.LENGTH_SHORT).show();
+                dbHandler.addNewUser(nume, prenume, username, password,email,0);
 
                     // after adding the data we are displaying a toast message.
                     //Toast.makeText(RegisterActivity.this, "Course has been added.", Toast.LENGTH_SHORT).show();
