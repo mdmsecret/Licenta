@@ -17,8 +17,8 @@ public class DeckAdapter extends BaseAdapter {
 
     // on below line we have created variables
     // for our array list and context.
-    private ArrayList<Event> eventData;
-    private Context context;
+    private final ArrayList<Event> eventData;
+    private final Context context;
 
     // on below line we have created constructor for our variables.
     public DeckAdapter(ArrayList<Event> eventData, Context context) {

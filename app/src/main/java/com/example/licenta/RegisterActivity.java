@@ -79,7 +79,7 @@ public class RegisterActivity extends AppCompatActivity {
                 dbHandler.addNewUser(nume, prenume, username, password,email,0);
 
                     // after adding the data we are displaying a toast message.
-                    //Toast.makeText(RegisterActivity.this, "Course has been added.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Inregistrare cu succes.", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(RegisterActivity.this, MainActivity.class);// New activity
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);

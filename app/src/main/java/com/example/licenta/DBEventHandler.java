@@ -87,7 +87,7 @@ public class DBEventHandler extends SQLiteOpenHelper {
         // on below line we are creating a
         // variable for content values.
         ContentValues values = new ContentValues();
-        String token=new String(owner+title+date);
+        String token= owner + title + date;
         values.put(TITLE_COL, title);
         values.put(OWNERS_COL, owner);
         values.put(DATE_COL,date);

@@ -10,47 +10,43 @@ import java.util.ArrayList;
 
 public class DBHandler extends SQLiteOpenHelper {
 
-    // creating a constant variables for our database.
-    // below variable is for our database name.
+
     private static final String DB_NAME = "users2";
 
-    // below int is our database version
+
     private static final int DB_VERSION = 1;
 
-    // below variable is for our table name.
+
     private static final String TABLE_NAME = "useri";
 
-    // below variable is for our id column.
+
     private static final String ID_COL = "id";
 
-    // below variable is for our course name column
+
     private static final String NUME_COL = "nume";
 
-    // below variable id for our course duration column.
+
     private static final String PRENUME_COL = "prenume";
 
-    // below variable for our course description column.
+
     private static final String USERNAME_COL = "username";
 
-    // below variable is for our course tracks column.
+
     private static final String PASSWORD_COL = "password";
 
     private static final String EMAIL_COL = "email";
 
     private static final String STATUS_COL = "status";
 
-    // creating a constructor for our database handler.
+
     public DBHandler(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
 
-    // below method is for creating a database by running a sqlite query
+
     @Override
     public void onCreate(SQLiteDatabase db) {
-        // on below line we are creating 
-        // an sqlite query and we are 
-        // setting our column names
-        // along with their data types.
+       
         String query = "CREATE TABLE " + TABLE_NAME + " ("
                 + ID_COL + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + PRENUME_COL + " TEXT,"

@@ -83,7 +83,7 @@ public class MainPage extends AppCompatActivity {
 
             }
         });
-        flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
+        flingContainer = findViewById(R.id.frame);
 
         array = new ArrayList<>();
         ArrayList<String> test=new ArrayList<>();
@@ -218,22 +218,22 @@ public class MainPage extends AppCompatActivity {
                 rowView = inflater.inflate(R.layout.item, parent, false);
                 // configure view holder
                 viewHolder = new MainPage.ViewHolder();
-                viewHolder.DataText = (TextView) rowView.findViewById(R.id.title);
-                viewHolder.DataText2 = (TextView) rowView.findViewById(R.id.owner);
-                viewHolder.DataText3 = (TextView) rowView.findViewById(R.id.time);
-                viewHolder.DataText4 = (TextView) rowView.findViewById(R.id.hour);
-                viewHolder.DataText5 = (TextView) rowView.findViewById(R.id.place);
-                viewHolder.DataText6 = (TextView) rowView.findViewById(R.id.description);
+                viewHolder.DataText = rowView.findViewById(R.id.title);
+                viewHolder.DataText2 = rowView.findViewById(R.id.owner);
+                viewHolder.DataText3 = rowView.findViewById(R.id.time);
+                viewHolder.DataText4 = rowView.findViewById(R.id.hour);
+                viewHolder.DataText5 = rowView.findViewById(R.id.place);
+                viewHolder.DataText6 = rowView.findViewById(R.id.description);
 
-                viewHolder.background = (FrameLayout) rowView.findViewById(R.id.background);
-                viewHolder.cardImage = (ImageView) rowView.findViewById(R.id.cardImage);
+                ViewHolder.background = rowView.findViewById(R.id.background);
+                viewHolder.cardImage = rowView.findViewById(R.id.cardImage);
                 rowView.setTag(viewHolder);
 
             } else {
                 viewHolder = (MainPage.ViewHolder) convertView.getTag();
             }
-            String l1=new String("afasd \n");
-            String l2=new String("afadialsd");
+            String l1= "afasd \n";
+            String l2= "afadialsd";
 
             viewHolder.DataText.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 

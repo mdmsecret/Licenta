@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                int ok=0;
                 // below line is to get data from all edit text fields.
                 String userText = userEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
@@ -58,13 +58,19 @@ public class LoginActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 for(Users us : usersArrayList) {
+                    ok=0;
                     if (us.getUsername().equals(userText) && us.getPassword().equals(password) && us.getStatus().equals(0)) {
                         setCurrentUser(userText);
+                        ok=1;
+                        dbHandler.updateUser(us.getLastName(),us.getFirstName(),us.getUsername(),us.getPassword(),us.getEmail(),1);
                         Intent intent = new Intent(LoginActivity.this, MainPage.class);// New activity
                         //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                         //finish();
                     }
+                }
+                if (ok==0) {
+                    Toast.makeText(LoginActivity.this, "User sau parola incorecte", Toast.LENGTH_SHORT).show();
                 }
                 // validating if the text fields are empty or not.
 

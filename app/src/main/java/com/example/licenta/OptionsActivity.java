@@ -16,12 +16,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class OptionsActivity extends AppCompatActivity {
-    private Button profileSettingsButton,eventSettingsButtons,eventSettingsButtons2;
+    private Button profileSettingsButton,eventSettingsButtons,eventSettingsButtons2,logOut;
+    private ArrayList<Users> array;
     private DBHandler dbHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.options_activity);
+
+        dbHandler = new DBHandler(OptionsActivity.this);
+
+
 
         profileSettingsButton = findViewById(R.id.idProfileSettingstButton);
 
@@ -63,7 +68,30 @@ public class OptionsActivity extends AppCompatActivity {
             }
         });
 
+        logOut=findViewById(R.id.button);
 
+        logOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String currUser = getCurrentUser();
+                array = dbHandler.readUsers();
+
+
+                    for (int i = 0; i < array.size(); i++) {
+                        Users us = array.get(i);
+                        if (us.getUsername().contains(currUser)) {
+                            dbHandler.updateUser(us.getLastName(),us.getFirstName(),us.getUsername(),us.getPassword(),us.getEmail(),0);
+                          }
+                    }
+
+
+                Intent intent = new Intent(OptionsActivity.this, StartPageActivity.class);// New activity
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
+
+            }
+        });
 
     }
 }

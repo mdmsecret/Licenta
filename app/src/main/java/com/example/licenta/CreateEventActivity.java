@@ -20,11 +20,11 @@ import java.util.ArrayList;
 
 public class CreateEventActivity extends AppCompatActivity {
 
-    // creating variables for our edittext, button and dbhandler
+
     TimePickerDialog picker;
     EditText eHourText,eDateText,eTitle,eDescription,ePlace,eMaxPers;
     Button btnCreate;
-    TextView tvw;
+
     private DBEventHandler dbHandler;
 
     @Override
@@ -66,16 +66,16 @@ public class CreateEventActivity extends AppCompatActivity {
 
             }
         });
-        eHourText =(EditText) findViewById(R.id.editTextTime);
+        eHourText = findViewById(R.id.editTextTime);
         eHourText.setInputType(InputType.TYPE_NULL);
         eHourText.setOnClickListener(new View.OnClickListener() {
-            //@RequiresApi(api = Build.VERSION_CODES.N)
+
             @Override
             public void onClick(View v) {
                 final Calendar cldr = Calendar.getInstance();
                 int hour = cldr.get(Calendar.HOUR_OF_DAY);
                 int minutes = cldr.get(Calendar.MINUTE);
-                // time picker dialog
+
                 picker = new TimePickerDialog(CreateEventActivity.this,
                         new TimePickerDialog.OnTimeSetListener() {
                             @Override
@@ -87,7 +87,7 @@ public class CreateEventActivity extends AppCompatActivity {
             }
         });
         btnCreate.setOnClickListener(new View.OnClickListener() {
-            //@RequiresApi(api = Build.VERSION_CODES.N)
+
             @Override
             public void onClick(View v) {
                 String title = eTitle.getText().toString();
@@ -98,8 +98,7 @@ public class CreateEventActivity extends AppCompatActivity {
                 String status_aug=eMaxPers.getText().toString();
                 Integer status=Integer.parseInt(status_aug);
                 ArrayList<String> participantsArray=new ArrayList<String>();
-               /* participantsArray.add("apa");
-                participantsArray.add("apa2");*/
+
                 if (title.isEmpty()||hour.isEmpty()||description.isEmpty()||place.isEmpty()||date.isEmpty()||status_aug.isEmpty()) {
                     Toast.makeText(CreateEventActivity.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
                     return;
@@ -107,12 +106,11 @@ public class CreateEventActivity extends AppCompatActivity {
                 String owner=getCurrentUser();
                 dbHandler.addNewEvent(title,description,date,hour,owner,status,place,participantsArray);
 
-                // after adding the data we are displaying a toast message.
-                //Toast.makeText(RegisterActivity.this, "Course has been added.", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(CreateEventActivity.this, MainPage.class);// New activity
+
+                Intent intent = new Intent(CreateEventActivity.this, MainPage.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
-                finish(); // Call once you redirect to another activity
+                finish();
 
 
             }

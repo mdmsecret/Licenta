@@ -1,6 +1,8 @@
 package com.example.licenta;
 
 
+import static com.example.licenta.MainActivity.getCurrentUser;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,8 +20,8 @@ import java.util.ArrayList;
 
 public class ListAdapter2 extends RecyclerView.Adapter<ListAdapter2.Viewholder> implements SwipeFlingAdapterView.OnItemClickListener {
 
-    private Context context;
-    private ArrayList<ListModel> courseModelArrayList;
+    private final Context context;
+    private final ArrayList<ListModel> courseModelArrayList;
     private DBEventHandler dbEventHandler;
     // Constructor
     public ListAdapter2(Context context, ArrayList<ListModel> courseModelArrayList) {
@@ -46,14 +48,14 @@ public class ListAdapter2 extends RecyclerView.Adapter<ListAdapter2.Viewholder> 
         holder.notInterestedAnymore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //String user=getCurrentUser();
+                String user=getCurrentUser();
                 ArrayList<String> participants_new=model.getEvent().getParticipants();
                 String token=model.getEvent().getToken();
                // String currUser=getCurrentUser();
                 dbEventHandler= new DBEventHandler(context);
-                Toast.makeText(context, token, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Eveniment sters", Toast.LENGTH_SHORT).show();
                 //participants_new.remove("apa");
-                dbEventHandler.deleteEvent("mdm");
+                dbEventHandler.deleteEvent(user);
                 //ListAdapter.this.notifyAll();
                 //onItemClickValue.onValueChange(testInt)
 
@@ -80,8 +82,10 @@ public class ListAdapter2 extends RecyclerView.Adapter<ListAdapter2.Viewholder> 
     // your views such as TextView and Imageview.
     public class Viewholder extends RecyclerView.ViewHolder {
 
-        private TextView courseNameTV, courseRatingTV, courseIV;
-        private Button notInterestedAnymore;
+        private final TextView courseNameTV;
+        private final TextView courseRatingTV;
+        private final TextView courseIV;
+        private final Button notInterestedAnymore;
 
         public Viewholder(@NonNull View itemView) {
             super(itemView);
