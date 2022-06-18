@@ -32,14 +32,13 @@ public class ListAdapter2 extends RecyclerView.Adapter<ListAdapter2.Viewholder> 
     @NonNull
     @Override
     public ListAdapter2.Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // to inflate the layout for each item of recycler view.
+
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview2, parent, false);
         return new Viewholder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ListAdapter2.Viewholder holder, int position) {
-        // to set data to textview and imageview of each card layout
 
         ListModel model = courseModelArrayList.get(position);
         holder.courseNameTV.setText(model.getCardTitle());
@@ -51,13 +50,12 @@ public class ListAdapter2 extends RecyclerView.Adapter<ListAdapter2.Viewholder> 
                 String user=getCurrentUser();
                 ArrayList<String> participants_new=model.getEvent().getParticipants();
                 String token=model.getEvent().getToken();
-               // String currUser=getCurrentUser();
+
                 dbEventHandler= new DBEventHandler(context);
                 Toast.makeText(context, "Eveniment sters", Toast.LENGTH_SHORT).show();
-                //participants_new.remove("apa");
+
                 dbEventHandler.deleteEvent(user);
-                //ListAdapter.this.notifyAll();
-                //onItemClickValue.onValueChange(testInt)
+
 
             }
 
@@ -68,8 +66,7 @@ public class ListAdapter2 extends RecyclerView.Adapter<ListAdapter2.Viewholder> 
 
     @Override
     public int getItemCount() {
-        // this method is used for showing number
-        // of card items in recycler view.
+
         return courseModelArrayList.size();
     }
 
@@ -78,8 +75,7 @@ public class ListAdapter2 extends RecyclerView.Adapter<ListAdapter2.Viewholder> 
 
     }
 
-    // View holder class for initializing of 
-    // your views such as TextView and Imageview.
+
     public class Viewholder extends RecyclerView.ViewHolder {
 
         private final TextView courseNameTV;

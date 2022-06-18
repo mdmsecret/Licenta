@@ -24,8 +24,8 @@ public class ProfileSettingsActivity extends AppCompatActivity {
     private Button saveChangesButton, deleteUserButton;
     private EditText firstName,lastName,username,email,password,confirmPassword;
     private DBHandler dbHandler;
-
-    public static String currentUser;
+    private Users aug;
+    public static String currentUser,encrypt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class ProfileSettingsActivity extends AppCompatActivity {
         dbHandler = new DBHandler(ProfileSettingsActivity.this);
         firstName=findViewById(R.id.editFistName);
         lastName=findViewById(R.id.editLastName);
-        //username=findViewById(R.id.editUsername);
+
         email=findViewById(R.id.editEmail);
         password=findViewById(R.id.editPassword);
         confirmPassword=findViewById(R.id.editCofirmPassword);
@@ -48,21 +48,36 @@ public class ProfileSettingsActivity extends AppCompatActivity {
             if (us.getUsername().equals(currentUser) ) {
                 firstName.setText(us.getFirstName());
                 lastName.setText(us.getLastName());
-                //username.setText(us.getUsername());
+
                 email.setText(us.getEmail());
-                //password.setText(us.getPassword());
+                aug=us;
 
             }
         }
         saveChangesButton.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View v) {
-                if(password.getText().toString()==confirmPassword.getText().toString())
-                dbHandler.updateUser(lastName.getText().toString(),firstName.getText().toString(),currentUser,password.getText().toString(),email.getText().toString(),1);
-                Intent intent = new Intent(ProfileSettingsActivity.this, OptionsActivity.class);// New activity
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                finish();
+
+                if(password.getText().toString().equals(confirmPassword.getText().toString())&&!password.getText().toString().isEmpty()) {
+                    try {
+                        encrypt=AESUtils.encrypt(password.getText().toString());
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    dbHandler.updateUser(lastName.getText().toString(), firstName.getText().toString(), getCurrentUser(),encrypt, email.getText().toString(), 1);
+                    Intent intent = new Intent(ProfileSettingsActivity.this, OptionsActivity.class);// New activity
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    finish();
+                }
+                else{
+                    dbHandler.updateUser(lastName.getText().toString(), firstName.getText().toString(), getCurrentUser(),aug.getPassword(), email.getText().toString(), 1);
+                    Intent intent = new Intent(ProfileSettingsActivity.this, OptionsActivity.class);// New activity
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
         deleteUserButton.setOnClickListener(new View.OnClickListener() {
@@ -79,7 +94,7 @@ public class ProfileSettingsActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 dbHandler.deleteUser(getCurrentUser());
-                                // Toast.makeText(MainPage.this, getCurrentUser(), Toast.LENGTH_SHORT).show();
+
                                 Intent intent = new Intent(ProfileSettingsActivity.this, MainActivity.class);// New activity
                                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);

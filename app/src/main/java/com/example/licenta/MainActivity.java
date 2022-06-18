@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             letsStart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);// New activity
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                     //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                     //finish(); // Call once you redirect to another activity

@@ -86,8 +86,6 @@ public class Event {
         this.status = status;
     }
 
-    // variables for our coursename,
-    // description, tracks and duration, id.
     private String title,owner,date,hour,place,description,token;
     private ArrayList<String> participants;
     private int status;

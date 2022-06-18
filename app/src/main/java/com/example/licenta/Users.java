@@ -2,8 +2,6 @@ package com.example.licenta;
 
 public class Users {
 
-    // variables for our coursename,
-    // description, tracks and duration, id.
 
 
     private String username;

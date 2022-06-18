@@ -32,14 +32,13 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.Viewholder> im
     @NonNull
     @Override
     public ListAdapter.Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // to inflate the layout for each item of recycler view.
+
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.cardview, parent, false);
         return new Viewholder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ListAdapter.Viewholder holder, int position) {
-        // to set data to textview and imageview of each card layout
 
         ListModel model = courseModelArrayList.get(position);
         holder.courseNameTV.setText(model.getCardTitle());
@@ -48,7 +47,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.Viewholder> im
         holder.notInterestedAnymore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //String user=getCurrentUser();
+
                 ArrayList<String> participants_new=model.getEvent().getParticipants();
                 String token=model.getEvent().getToken();
                 String currUser=getCurrentUser();
@@ -57,8 +56,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.Viewholder> im
                 participants_new.remove(currUser
                 );
                 dbEventHandler.updateParticipants(participants_new,token);
-                //ListAdapter.this.notifyAll();
-                //onItemClickValue.onValueChange(testInt)
+
 
             }
 
@@ -69,8 +67,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.Viewholder> im
 
     @Override
     public int getItemCount() {
-        // this method is used for showing number
-        // of card items in recycler view.
+
         return courseModelArrayList.size();
     }
 
@@ -79,8 +76,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.Viewholder> im
 
     }
 
-    // View holder class for initializing of 
-    // your views such as TextView and Imageview.
+
     public class Viewholder extends RecyclerView.ViewHolder {
 
         private final TextView courseNameTV;

@@ -44,28 +44,16 @@ public class MainPage extends AppCompatActivity {
 
         settingsAccountButton = findViewById(R.id.idSettingsButton);
 
-        // creating a new dbhandler class
-        // and passing our context to it.
+
         dbHandler = new DBHandler(MainPage.this);
-        /*findEventButton=findViewById(R.id.idFindEventButton);
 
-        findEventButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainPage.this, Find_events.class);// New activity
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                finish();
-
-            }
-        });*/
 
         createButton=findViewById(R.id.idCreateEventButton);
 
         createButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainPage.this, CreateEventActivity.class);// New activity
+                Intent intent = new Intent(MainPage.this, CreateEventActivity.class);
                 //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 //finish();
@@ -76,7 +64,7 @@ public class MainPage extends AppCompatActivity {
         settingsAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainPage.this, OptionsActivity.class);// New activity
+                Intent intent = new Intent(MainPage.this, OptionsActivity.class);
                 //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
                 //finish();
@@ -87,24 +75,10 @@ public class MainPage extends AppCompatActivity {
 
         array = new ArrayList<>();
         ArrayList<String> test=new ArrayList<>();
-       /* array.add(new Data("https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FDuck_test&psig=AOvVaw0xK5HyVaq_hzeJvl9Xlh3Z&ust=1646561677444000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPDP2LDervYCFQAAAAAdAAAAABAD", "Alexis Sanchez, Arsenal forward. Wanna chat with me ?. \n" +
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
-        array.add(new Data("http://www.delaroystudios.com/images/2.jpg", "Christano Ronaldo, Real Madrid star. Wanna chat with me ? \n" +
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
-        array.add(new Data("http://www.delaroystudios.com/images/3.jpg", "Lionel Messi, Barcelona Best player. Wanna chat with me ? \n" +
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
-        array.add(new Data("http://www.delaroystudios.com/4.jpg", "David Beckham. Wanna chat with me ? \n" +
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
-        array.add(new Data("http://www.delaroystudios.com/images/5.jpg", "Sergio Arguerio. Wanna chat with me ? \n" +
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
-        array.add(new Data("http://www.delaroystudios.com/images/6.jpg", "Sergio Ramos. Wanna chat with me ? \n" +
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
-        array.add(new Data("http://www.delaroystudios.com/images/7.jpg", "Robert Lewandoski. Wanna chat with me ? \n" +
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
-*/
+
         dbEventHandler= new DBEventHandler(MainPage.this);
         array = dbEventHandler.readEvent();
-        //myAppAdapter = new Find_events.MyAppAdapter(array, Find_events.this);
+
         myAppAdapterNew = new MainPage.MyAppAdapterNew(array, MainPage.this);
         flingContainer.setAdapter(myAppAdapterNew);
         flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
@@ -117,9 +91,7 @@ public class MainPage extends AppCompatActivity {
             public void onLeftCardExit(Object dataObject) {
                 array.remove(0);
                 myAppAdapterNew.notifyDataSetChanged();
-                //Do something on the left!
-                //You also have access to the original object.
-                //If you want to use it just cast it (String) dataObject
+
             }
 
             @Override
@@ -151,7 +123,7 @@ public class MainPage extends AppCompatActivity {
         });
 
 
-        // Optionally add an OnItemClickListener
+
         flingContainer.setOnItemClickListener(new SwipeFlingAdapterView.OnItemClickListener() {
             @Override
             public void onItemClicked(int itemPosition, Object dataObject) {
@@ -216,7 +188,7 @@ public class MainPage extends AppCompatActivity {
 
                 LayoutInflater inflater = getLayoutInflater();
                 rowView = inflater.inflate(R.layout.item, parent, false);
-                // configure view holder
+
                 viewHolder = new MainPage.ViewHolder();
                 viewHolder.DataText = rowView.findViewById(R.id.title);
                 viewHolder.DataText2 = rowView.findViewById(R.id.owner);
@@ -232,8 +204,7 @@ public class MainPage extends AppCompatActivity {
             } else {
                 viewHolder = (MainPage.ViewHolder) convertView.getTag();
             }
-            String l1= "afasd \n";
-            String l2= "afadialsd";
+
 
             viewHolder.DataText.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 
@@ -242,14 +213,10 @@ public class MainPage extends AppCompatActivity {
             viewHolder.DataText3.setText(parkingList.get(position).getDate());
             viewHolder.DataText4.setText(parkingList.get(position).getHour());
             viewHolder.DataText5.setText(parkingList.get(position).getPlace());
-            //viewHolder.DataText6.setText(parkingList.get(position).getDescription());
+
             viewHolder.DataText6.setText(parkingList.get(position).getDescription());
 
-            //viewHolder.cardImage.setImageResource(R.drawable.shape_for_image);
 
-            //viewHolder.DataText.autofill((SparseArray<AutofillValue>) parkingList);
-
-            //Glide.with(Find_events.this).load("http://via.placeholder.com/300.png").into(viewHolder.cardImage);
 
             return rowView;
         }

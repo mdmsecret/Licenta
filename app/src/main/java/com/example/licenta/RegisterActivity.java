@@ -33,23 +33,22 @@ public class RegisterActivity extends AppCompatActivity {
         registerButton = findViewById(R.id.idRegisterButton);
         emailEdt=findViewById(R.id.idEmailText);
 
-        // creating a new dbhandler class
-        // and passing our context to it.
+
         dbHandler = new DBHandler(RegisterActivity.this);
         ArrayList<Users> usersArrayList= dbHandler.readUsers();
-        // below line is to add on click listener for our add course button.
+
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                // below line is to get data from all edit text fields.
+
                 String nume = numeEdt.getText().toString();
                 String prenume = prenumeEdt.getText().toString();
                 String username = userNameEdt.getText().toString();
                 String password = passwordEdt.getText().toString();
                 String passwordVer = passwordVerEdt.getText().toString();
                 String email = emailEdt.getText().toString();
-                // validating if the text fields are empty or not.
+
                 if (nume.isEmpty() || prenume.isEmpty() || username.isEmpty() || password.isEmpty()) {
                     Toast.makeText(RegisterActivity.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
                     return;
@@ -67,23 +66,21 @@ public class RegisterActivity extends AppCompatActivity {
                     }
                 }
 
-                    // on below line we are calling a method to add new
-                    // course to sqlite data and pass all our values to it.
-                //Toast.makeText(RegisterActivity.this, "Inregistrare cu succes", Toast.LENGTH_SHORT).show();
+
                 try {
                     password=AESUtils.encrypt(password);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                Toast.makeText(RegisterActivity.this, password, Toast.LENGTH_SHORT).show();
+                
                 dbHandler.addNewUser(nume, prenume, username, password,email,0);
 
-                    // after adding the data we are displaying a toast message.
+
                     Toast.makeText(RegisterActivity.this, "Inregistrare cu succes.", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(RegisterActivity.this, MainActivity.class);// New activity
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
-                    finish(); // Call once you redirect to another activity
+                    finish();
 
             }
         });

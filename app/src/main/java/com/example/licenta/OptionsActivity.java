@@ -30,8 +30,7 @@ public class OptionsActivity extends AppCompatActivity {
 
         profileSettingsButton = findViewById(R.id.idProfileSettingstButton);
 
-        // creating a new dbhandler class
-        // and passing our context to it.
+
 
         profileSettingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
